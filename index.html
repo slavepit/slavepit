@@ -13,9 +13,9 @@
 		</div>
 
 		<script type="module">
-			import * as THREE from '../build/three.module.js';
-			import { GUI } from './jsm/libs/dat.gui.module.js';
-			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+			import * as THREE from 'three.module.js';
+			import { GUI } from 'dat.gui.module.js';
+			import { OrbitControls } from 'OrbitControls.js';
 			var mesh, renderer, scene, camera;
 			var gui;
 			var API = {
@@ -43,7 +43,7 @@
 				controls.maxDistance = 50;
 				controls.maxPolarAngle = Math.PI / 2;
 				var geometry = new THREE.BoxBufferGeometry( 10, 10, 10 );
-				new THREE.TextureLoader().load( 'textures/uv_grid_opengl.jpg', function ( texture ) {
+				new THREE.TextureLoader().load( 'uv_grid_opengl.jpg', function ( texture ) {
 					texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 					texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
 					//texture.matrixAutoUpdate = false; // default true; set to false to update texture.matrix manually
